@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@font-face {
+  font-family: 'Pretendard';
+  src: url(font/Pretendard-Bold.otf);
+  src: url(font/Pretendard-Regular.otf);
+  src: url(font/Pretendard-Medium.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 62.5% of 16px → 10px */
+}
+
+body {
+  font-family: Pretendard-Regular;
+  height: 5000px;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url(twosome_img/main_image/Rectangle\ 66.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+/* .hero .overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.1);
+  z-index: 1;
+} */
+
+.hero-contents {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  padding: 2rem 6rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 750px;
+  margin-bottom: 2rem;
+}
+
+.buy {
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+/* intro start */
+
+.introduction-section {
+  margin-bottom: 8rem;
+}
+
+.container_intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 12rem;
+}
+
+.intro_title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.intro_title .intro_icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 3rem;
+}
+
+/* .intro_title::before {
+  content: '●';
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+} */
+
+/* 행 */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 2rem;
+}
+
+/* 열 */
+.column {
+  flex: 1 1 45%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* 이미지 스타일 */
+.intro-image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.content-image {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* 텍스트 박스 */
+.text-box h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.text-box .subtitle {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.text-box p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+p.small {
+  font-size: 1.6rem;
+  color: #d0d0d0;
+}
+
+/* intro end */
+
+/* menu story start */
+
+.container_menu {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 12rem;
+  margin-bottom: 8rem;
+}
+
+.menu-story-section {
+  padding: 5rem 12rem;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.menu-title .menu-icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 3rem;
+}
+
+.menu-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.menu-column.image-box {
+  max-width: 700px;
+}
+
+.menu-column.text-box {
+  margin-top: 20rem;
+  flex: 0 1 35%;
+  max-width: 500px;
+  padding-left: 3rem;
+}
+
+.menu-main-image {
+  /* display: flex; */
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  /* transform: scale(1.5); 이미지 1.1배 확대 */
+  transition: transform 0.3s ease;
+}
+
+.text-box .menu-subtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-top: 2rem; /* 라인과 텍스트 사이 간격 */
+  border-top: 2px solid #dfa833; /* 노란색 라인 */
+  display: inline-block; /* 라인 길이 조절 가능 */
+}
+
+.text-box .eng-title {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  color: #dfa833; /* 노란 포인트 컬러 느낌 */
+  margin-bottom: 2rem;
+}
+
+.text-box .desc {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.more-btn {
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  background-color: #dfa833; /* 노란색 버튼 */
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* menu story end */
+
+/* 20th */
+.center-section {
+  background-color: rgba(222, 222, 222, 0.2); /* 0.8 = 80% 불투명, 20% 투명 */
+  padding: 5rem 0; /* 위아래 패딩만 적용 */
+  margin-bottom: 8rem;
+}
+
+.center-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.center-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.center-icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 3rem; /* 원하는 크기로 조정 */
+}
+
+.center-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* 간격 자연스럽게 */
+  margin-bottom: 5rem;
+}
+
+.center-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.center-image-box {
+  flex: 0 0 60%; /* 이미지가 60% */
+  display: flex;
+  justify-content: center;
+}
+
+.center-image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.center-text-box {
+  flex: 0 0 40%; /* 텍스트가 40% */
+  text-align: left;
+  padding: 2rem;
+}
+
+.center-text-box h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.center-text-box p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.center-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+}
+
+.center-image-box img {
+  width: 100%;
+  max-width: 1072px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* 20th end */
+
+/* our space our story */
+
+.space-section {
+  background-color: #fff;
+  padding: 8rem 0;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.space-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  font-family: 'Alata', sans-serif;
+}
+
+.space-image-box {
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+}
+
+.space-image-box img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.space-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  text-align: left;
+}
+
+.space-left,
+.space-right {
+  flex: 1;
+}
+
+.space-left h3,
+.space-right h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Alata', sans-serif;
+}
+
+.space-left p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.space-right p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #777;
+}
+
+.space-left a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  color: #333; /* 포인트 컬러 예시 */
+  text-decoration: underline;
+}
+
+/* space end */
+
+/* cs start */
+.inquiry-section {
+  background-color: #f9f9f9;
+  padding: 8rem 0;
+}
+
+.inquiry-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.inquiry-left {
+  flex: 0 0 50%;
+}
+
+.inquiry-left img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  margin-left: 5rem;
+}
+
+.inquiry-right {
+  flex: 0 0 50%;
+  text-align: left;
+  margin-right: 50rem;
+}
+
+.inquiry-right h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.inquiry-form {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  max-width: 400px;
+}
+
+.inquiry-form input {
+  flex: 1;
+  border: none;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  background: none;
+  outline: none;
+}
+
+.inquiry-form button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.inquiry-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.inquiry-links a {
+  font-size: 1.4rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.inquiry-links a:hover {
+  text-decoration: underline;
+}
+/* cs end */
+
+/* footer start */
+
+.footer-section {
+  background-color: #fbe9e6; /* 연한 피치톤 (이미지 기준 유사) */
+  padding: 5rem 2rem 3rem 2rem;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-links-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-links-top a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links-top a:hover {
+  text-decoration: underline;
+}
+
+.footer-address {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.footer-address strong {
+  font-weight: bold;
+}
+
+.footer-info {
+  color: #666;
+  font-size: 1.3rem;
+}
+
+/* 오른쪽 영역 (선 + 링크 묶음) */
+.footer-right {
+  display: flex; /* ⭐️ 핵심 → row 로 변경 */
+  align-items: center; /* ⭐️ 세로 가운데 정렬 */
+  gap: 2rem;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 100px; /* 원하는 길이 설정 (ex: 100px 정도) */
+  background-color: #ccc;
+}
+
+.footer-right-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-right-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-right-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-right-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom-logo {
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+  text-align: right;
+}
+
+.footer-bottom-logo img {
+  width: 150px;
+  opacity: 0.8;
+}
+/* footer end */
